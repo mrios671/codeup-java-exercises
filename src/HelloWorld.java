@@ -36,6 +36,63 @@ public class HelloWorld {
         //long myNumber = 123;
         //System.out.println(myNumber);
 
+        //Question 9
+        //float myNumber = 3.14;
+        //System.out.println(myNumber);
+
+        //Question 10
+        //int x = 5;
+        //System.out.println(x++);
+        //System.out.println(x);
+        //this post decrements, which means it grabs the value of x first, and then displays the increment after it is initialized
+        /*
+        int x = 5;
+        System.out.println(++x);
+        System.out.println(x);
+        */
+
+        //Question 11
+        //String class= "hello";
+        //System.out.println(class);
+        //if i tried declaring "class" as a variable it will not run because it is not a valid statement
+
+        //Question 12
+        //I expect the following code to output the string "three"
+
+        //String theNumberThree = "three";
+        //Object o = theNumberThree;
+
+        //int three = (int) o;
+        // it gave an error
+
+       // int three = (int) "three";
+        // this version only showed me a conversion error
+
+        //Question 13
+
+        //int x = 4;
+        //x = x + 5;
+
+        //int x = 4;
+       // x +=5;
+        //int x = 4+5
+
+        //either or they output the same thing
+        //System.out.println(x);
+
+        //int x = 3;
+        //int y = 4;
+        //y = y * x;
+        //x *= y;
+        //System.out.println(x);
+
+        int x = 10;
+        int y = 2;
+        x = x / y;
+        y = y - x;
+        System.out.println(y);
+        System.out.println(x);
+
 
     }
 }
