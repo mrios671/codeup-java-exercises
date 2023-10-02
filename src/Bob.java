@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Bob {
     public static void main(String[] args) {
 
-        boolean talkMore = true;
+        boolean talkMore = false;
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Talk to Bob...");
 
@@ -24,15 +24,15 @@ public class Bob {
                 System.out.println(anythingElse);
             }
 
-//            System.out.println("Do you want to ask Bob another question?");
-//            myScanner.nextLine();
-//            String userReply = myScanner.nextLine();
-//
-//            if(userReply.toLowerCase().equals("yes")){
-//                talkMore =true;
-//            }else{
-//                talkMore =false;
-//            }
+            System.out.println("Do you want to ask Bob another question?");
+
+            String userReply = myScanner.nextLine();
+
+            if(userReply.toLowerCase().equals("yes")){
+                talkMore =true;
+            }else{
+                talkMore =false;
+            }
 
         } while(talkMore);
 
