@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args){
 //        int i = 5;
@@ -41,18 +42,24 @@ public class ControlFlowExercises {
 //        }
 
 //        FIZZBUZZ
-        for(int i = 1; i<= 100; i++){
+//        for(int i = 1; i<= 100; i++){
+//
+//            if(i % 15 == 0){
+//                System.out.println("fizzbuzz");
+//            } else if(i % 3 == 0){
+//                System.out.println("Fizz");
+//            } else if(i % 5 == 0){
+//                System.out.println("Buzz");
+//            } else{
+//                System.out.println(i);
+//            }
+//        }
 
-            if(i % 15 == 0){
-                System.out.println("fizzbuzz");
-            } else if(i % 3 == 0){
-                System.out.println("Fizz");
-            } else if(i % 5 == 0){
-                System.out.println("Buzz");
-            } else{
-                System.out.println(i);
-            }
-        }
+        // Table of Powers
+        Scanner myScanner = new Scanner(System.in);
+
+        System.out.println("What b=number would you like to go up to? ");
+
 
     }
 }
