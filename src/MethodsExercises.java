@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 public class MethodsExercises {
     public static Scanner localScanner = new Scanner(System.in);
     public static void main(String[] args) {
@@ -11,6 +12,7 @@ public class MethodsExercises {
         System.out.println(getInteger(1,10));
 
         factorialPrint();
+        randomDie();
 
     }
 
@@ -65,6 +67,27 @@ public class MethodsExercises {
 
         }
 
+    }
+
+    public static void randomDie(){
+        System.out.println("Enter the number of dice: ");
+        int num = localScanner.nextInt();
+
+        while(num <=0){
+            System.out.println("The number of dice can't be 0 or negative");
+            System.out.println("Enter the number of dice: ");
+            num = localScanner.nextInt();
+        }
+
+        Random rand = new Random();
+        do{
+            System.out.println("The values on the dice are: ");
+            for(int i = 0; i < num; i++){
+                System.out.println(rand.nextInt(6)+1);
+            }
+            System.out.println("Do you want to roll the dice again? true or false?");
+        } while(localScanner.nextBoolean()== true);
+        localScanner.close();
     }
 
 }
