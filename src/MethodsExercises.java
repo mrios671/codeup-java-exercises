@@ -48,7 +48,7 @@ public class MethodsExercises {
         }
         return userInput;
     }
-
+    //Question 3
     public static void factorialPrint(){
         int myUsersNum = getInteger(1, 10);
         String myOutput = "1";
@@ -68,7 +68,7 @@ public class MethodsExercises {
         }
 
     }
-
+    //Question 4
     public static void randomDie(){
         System.out.println("Enter the number of dice: ");
         int num = localScanner.nextInt();
