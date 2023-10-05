@@ -58,7 +58,7 @@ public class ControlFlowExercises {
         // Table of Powers
         Scanner myScanner = new Scanner(System.in);
 
-        System.out.println("What b=number would you like to go up to? ");
+        System.out.println("What number would you like to go up to? ");
 
 
     }

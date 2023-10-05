@@ -2,6 +2,8 @@ import java.util.Scanner;
 import java.util.Random;
 public class MethodsExercises {
     public static Scanner localScanner = new Scanner(System.in);
+    public static int randomNumber;
+
     public static void main(String[] args) {
         System.out.println(addition(2, 7));
         System.out.println(subtraction(10, 5));
@@ -13,6 +15,7 @@ public class MethodsExercises {
 
         factorialPrint();
         randomDie();
+        playGame();
 
     }
 
@@ -90,4 +93,30 @@ public class MethodsExercises {
         localScanner.close();
     }
 
+    // Question 5
+    public static void playGame() {
+        int userGuess = 0;
+        boolean guessedCorrectly = false;
+
+        while (guessedCorrectly) {
+            System.out.print("Enter your guess (between 1 and 100): ");
+
+            // Validate user input
+            while (localScanner.hasNextInt()!=guessedCorrectly) {
+                System.out.println("Invalid input. Please enter a valid number.");
+                localScanner.next();  // Clear the invalid input
+            }
+            userGuess = localScanner.nextInt();
+
+            if (userGuess < randomNumber) {
+                System.out.println("HIGHER");
+            } else if (userGuess > randomNumber) {
+                System.out.println("LOWER");
+            } else {
+                System.out.println("GOOD GUESS!");
+                guessedCorrectly = true;
+            }
+        }
+    }
 }
+

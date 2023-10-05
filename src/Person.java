@@ -1,6 +1,12 @@
 public class Person {
     private String name;
 
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+
     public String getName(){
         return name;
     }
@@ -11,12 +17,13 @@ public class Person {
     public void sayHello(){
         System.out.println("Hello, " + name);
     }
+
     public static void main(String[] args){
 
-        Person lilBaby = new Person();
-        lilBaby.setName("Joe");
-        System.out.println(lilBaby.getName());
-        lilBaby.sayHello();
+//        Person lilBaby = new Person();
+//        lilBaby.setName("Joe");
+//        System.out.println(lilBaby.getName());
+//        lilBaby.sayHello();
 
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
