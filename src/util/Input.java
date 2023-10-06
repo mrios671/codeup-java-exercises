@@ -22,7 +22,8 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.println("Please enter a number between 1 and 10");
+//        System.out.println("Please enter a number between 1 and 10");
+        System.out.println("Enter your choice: ");
         int userInput = scanner.nextInt();
 
         if(userInput < min || userInput > max){
