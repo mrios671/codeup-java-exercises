@@ -16,21 +16,14 @@ public class InputTest {
 //        int test = intInput.getInt(1, 10);
 //        System.out.println(test);
 
-        try{
-            Input getIntInput = new Input();
-            int testTwo = getIntInput.getInt();
-            System.out.println(testTwo);
-        } catch (NumberFormatException e){
-            System.out.println("Sorry, that input is not a number");
-        }
+        Input getIntInput = new Input();
+        int testTwo = getIntInput.getInt();
+        System.out.println(testTwo);
 
-        try {
-            Input getDbl = new Input();
-            double dblTest = getDbl.getDouble(1.00, 10.00);
-            System.out.println(dblTest);
-        } catch (InputMismatchException e){
-            System.out.println("Sorry, that input is not a decimal number");
-        }
+        Input getDbl = new Input();
+        double dblTest = getDbl.getDouble(1.00, 10.00);
+        System.out.println(dblTest);
+
 //        Input getSingleDouble = new Input();
 //        double dblTestTwo = getSingleDouble.getDouble();
 //        System.out.println(dblTestTwo);

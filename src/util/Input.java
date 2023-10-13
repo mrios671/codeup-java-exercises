@@ -1,5 +1,6 @@
 package util;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
@@ -34,16 +35,13 @@ public class Input {
     }
 
     public int getInt(){
-        System.out.println("Enter a Number: ");
-        Input localInput = new Input();
-        //First step: Refactor to getting a String..
-        String userInput = localInput.getString();
-
-        //Second step: Can I make a number datatype out of that string?
-       int returnVariable = Integer.valueOf(userInput);
-
-       //Okay: How can we use a try catch to make sure the returnVariable is actually a number?
-        return returnVariable;
+        try {
+            System.out.println("Enter a Number: ");
+            String userInput = getString();
+            return Integer.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            throw new InputMismatchException("Input is not a valid integer");
+        }
     }
 
     public double getDouble(double min, double max){
@@ -58,12 +56,13 @@ public class Input {
     }
 
     public double getDouble(){
-        System.out.println("Enter a decimal number: ");
-        Input localInput = new Input();
-        String userInput = localInput.getString();
-//        double userInput = scanner.nextDouble();
-        Double returnVariable = Double.valueOf(userInput);
-        return returnVariable;
+        try {
+            System.out.println("Enter a decimal number: ");
+            String userInput = getString();
+            return Double.valueOf(userInput);
+        } catch (NumberFormatException e){
+            throw new InputMismatchException("Input is not a valid decimal number");
+        }
     }
 
 }
