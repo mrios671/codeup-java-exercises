@@ -35,8 +35,15 @@ public class Input {
 
     public int getInt(){
         System.out.println("Enter a Number: ");
-        int userInput = scanner.nextInt();
-        return userInput;
+        Input localInput = new Input();
+        //First step: Refactor to getting a String..
+        String userInput = localInput.getString();
+
+        //Second step: Can I make a number datatype out of that string?
+       int returnVariable = Integer.valueOf(userInput);
+
+       //Okay: How can we use a try catch to make sure the returnVariable is actually a number?
+        return returnVariable;
     }
 
     public double getDouble(double min, double max){
@@ -52,8 +59,11 @@ public class Input {
 
     public double getDouble(){
         System.out.println("Enter a decimal number: ");
-        double userInput = scanner.nextDouble();
-        return userInput;
+        Input localInput = new Input();
+        String userInput = localInput.getString();
+//        double userInput = scanner.nextDouble();
+        Double returnVariable = Double.valueOf(userInput);
+        return returnVariable;
     }
 
 }
