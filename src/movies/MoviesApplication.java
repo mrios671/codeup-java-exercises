@@ -14,7 +14,7 @@ public class MoviesApplication {
         Input userInput = new Input();
 
         while (true) {
-
+            Movie[] movies = MoviesArray.findAll();
             System.out.println("What would you like to do?");
             System.out.println("0 - Exit");
             System.out.println("1 - view all movies");
@@ -30,11 +30,49 @@ public class MoviesApplication {
             if (userSelection == 0) {
                 System.out.println("Thank you, Goodbye!");
                 break;
+            } else if (userSelection == 1) {
+                for (int i = 0; i < movies.length; i++) {
+                    System.out.printf("Name: %s -- Category: %s%n", movies[i].getName(), movies[i].getCategory());
+                }
+            } else if (userSelection == 2){
+                for (int i = 0; i < movies.length; i++) {
+                    if(movies[i].getCategory().equals("animated")) {
+                    System.out.printf("Name: %s -- Category: %s%n", movies[i].getName(),movies[i].getCategory() );
+                    }
+                }
+            } else if (userSelection == 3){
+                for (int i = 0; i < movies.length; i++) {
+                    if(movies[i].getCategory().equals("drama")) {
+                        System.out.printf("Name: %s -- Category: %s%n", movies[i].getName(),movies[i].getCategory() );
+                    }
+                }
+            } else if (userSelection == 4){
+                for (int i = 0; i < movies.length; i++) {
+                    if(movies[i].getCategory().equals("horror")) {
+                        System.out.printf("Name: %s -- Category: %s%n", movies[i].getName(),movies[i].getCategory() );
+                    }
+                }
+            } else if (userSelection == 5){
+                for (int i = 0; i < movies.length; i++) {
+                    if(movies[i].getCategory().equals("scifi")) {
+                        System.out.printf("Name: %s -- Category: %s%n", movies[i].getName(),movies[i].getCategory() );
+                    }
+                }
+            } else if (userSelection == 6){
+                for (int i = 0; i < movies.length; i++) {
+                    if(movies[i].getCategory().equals("musical")) {
+                        System.out.printf("Name: %s -- Category: %s%n", movies[i].getName(),movies[i].getCategory() );
+                    }
+                }
+            } else if (userSelection == 2){
+                for (int i = 0; i < movies.length; i++) {
+                    if(movies[i].getCategory().equals("comedy")) {
+                        System.out.printf("Name: %s -- Category: %s%n", movies[i].getName(),movies[i].getCategory() );
+                    }
+                }
+            } else {
+                System.out.println("SORRY --- There are no matching movies");
             }
-
-            Movie[] movies = MoviesArray.findAll();
-
-
 
         }
     }

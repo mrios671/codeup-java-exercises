@@ -24,21 +24,21 @@ public class Movie {
         this.category = category;
     }
 
-    public String toString(){
-        return String.format("Name: $s -- Category: $s", name, category);
-    }
-    //    public String getInfo(){
-//        return String.format("Name: %s -- Category: %s", name, category);
+//    public String toString(){
+//        return String.format("Name: $s -- Category: $s", this.name, this.category);
+//    }
+//        public String getInfo(){
+//        return String.format("Name: %s -- Category: %s", this.name, this.category);
 //    }
 
 
     //Below is a main method that I used to test whether the methods actually worked before I moved forward.
 
-//    public static void main(String[] args) {
+    public static void main(String[] args) {
 //        Movie favMovie = new Movie("50 First Dates", "Romance/Comedy");
 //        System.out.printf(favMovie.getInfo());
-//
-//
-//
-//    }
+
+
+
+    }
 }
